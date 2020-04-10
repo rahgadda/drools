@@ -1,0 +1,13 @@
+package rules;
+import org.onestart.com.HelloWorld
+
+rule "HelloWorld"
+     dialect "mvel"
+  when
+    m : HelloWorld( message : message )
+  then
+    System.out.println( "Entered into rule-engine " + message);
+    modify ( m ) {
+      message = "Welcome to Drools "+ message;
+    }
+end
