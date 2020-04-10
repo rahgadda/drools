@@ -7,6 +7,19 @@
 - [Appendix](#appendix)
 
 ## Overview
+- JBoss Drools is a Business Rule Management System. It is a framework where you can create rules that defines when a specific action should be done.
+- Fundamentals terminologies of drools:
+  - **Rules**: These are part of knowledge that performs some tasks when specific conditions occur.
+  - **Knowledge Base**: It represents the knowledge in the Drools ecosystem which stores resources that form rules.
+  - **Data Model**: It contains structure of data on which rules are applied. A data model is a set of java classes that define data types.
+  - **Rule Engine**: It is a rule-based approach to implement an knowledge-based systems which can be used to make decisions.
+  - **Facts**: It represents the data which serves as input for rules.
+  - **Working Memory**: It is a storage of facts, where they are used for pattern matching. It can be modified, insert, and remove.
+  - **Knowledge Session**: This component holds all the resources required for firing rule. Here, all facts are inserted into the single session, and then matching rules are fired.
+  - **Module**: This is a module which stores multiple Knowledge Bases which can hold different sessions.
+  - **KIE**: "Knowledge Is Everything" is an umbrella project introduced to bring related technologies.
+    - **KieContainer**: To work with kie technologies, we have to instantiate a KieContainer.
+    - **KieSession**: We have to get it from the KieContainer to work with drools. This is used to give facts to the rule engine and fire rules.
 
 ---
 ## Installation
@@ -55,10 +68,14 @@
   docker run -p 8180:8080 -d --name kie-server --link drools-workbench:kie-wb jboss/kie-server-showcase:latest
   ``` 
   ![](./02-Images/01-Installation.png)
+
 ---
 ## Modules
+- Below are the example implementations of drools project.
+  -  
 
 ---
 ## Appendix
 - References
+  - [Drools Overview](https://www.youtube.com/watch?v=fpMiZmvkItM)
   - [Kia Workbench - Medium](https://medium.com/@hasnat.saeed/setup-jboss-drools-workbench-and-kie-execution-server-on-wildfly-14-on-ubuntu-18-04-using-docker-e87b10f301ad)
