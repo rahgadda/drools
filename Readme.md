@@ -10,7 +10,7 @@
 
 ---
 ## Installation
-- Docker based installation
+- **Docker based installation**
   - Create a Oracle Linux 7 environment.
   - Execute below commands to run Drools Workbench
   ```shell
