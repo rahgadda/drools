@@ -7,7 +7,7 @@ rule "HelloWorld"
     $helloWorld : HelloWorld(isGreetingDone==false, message : message)
   then
     System.out.println("Entered into rule-engine " + message);
-    $helloWorld.setMessage("Welcome to Drools "+ message);
-    $helloWorld.setIsGreetingDone(true);
+    $helloWorld.message = "Welcome to Drools "+ message;
+    $helloWorld.isGreetingDone = true;
     modify ($helloWorld);
 end
