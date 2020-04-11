@@ -125,8 +125,8 @@
   - [01-HelloWorld](./01-Src/01-Helloworld)
   - [Listeners]()
   - [KSession Types]()
-  - [Decision Table]()
   - [Ki Server]()
+  - [Decision Table]()
 
 ---
 ## Appendix
