@@ -17,6 +17,10 @@
   - **Rules**: These are part of knowledge that performs some tasks when specific conditions occur. These are defined as `.drl` files.
     
     ```drl
+    package <org.example.com>
+
+    import <org.example.class>
+
     rule  <rule_name>
     <attribute> <value>
         
@@ -28,15 +32,24 @@
     end
     ```
     
+    - *Package* is used to acts as a namespace for Rules. Rule names within a package must be unique. These are similar to Java packages
+    - *import* is used to import fact/action  pojo classes that act as data model/action helpers.
+    - *global* keyword is used in drools to define a global variable. Global variable are used to make a variable visible to all the rules inside a DRL file.
+    - *dialect* keyword is used in drools to define the syntax employed in the expressions in the condition section or action section. By default the dialect is **Java**. Drools also support dialect **mvel**
     - *rule* keyword must be followed by a logical rule name.
     - *when* keyword must be followed by some condition.
     - *then* keyword must have the consequence part if the when condition is met.
+    - Rules actions have below keywords
+      - *modify*: Used to modify attributes of facts.
+      - *insert*: Used to insert a new fact for the given session.
+      - *retract*: Used to remove fact from current session.
 
   - **Knowledge Base**: It represents the knowledge in the Drools ecosystem which stores resources that form rules.
   - **Data Model**: It contains structure of data on which rules are applied. A data model is a set of java classes that define data types.
   - **Rule Engine**: It is a rule-based approach to implement an knowledge-based systems which can be used to make decisions. It is also refereed as **Production Rule System**.
   - **Facts**: It represents the data which serves as input for rules.
   - **Inference Engine**: This is the brain of *Rule Engine*. It can scale to number of rules and facts. It matches facts/data against *Rules*.
+  - **Pattern Matching**: This process matches facts with rules by the *Inference Engine*. Drools Implements and extends the *Rete Algorithm* for pattern matching.
   - **Working Memory**: It is a storage of facts, where they are used for pattern matching. It can be modified, insert, and remove.
   - **Knowledge Session**: This component holds all the resources required for firing rule. Here, all facts are inserted into the single session, and then matching rules are fired.
   - **Module**: This is a module which stores multiple Knowledge Bases which can hold different sessions.
@@ -109,7 +122,7 @@
   - [01-HelloWorld](./01-Src/01-Helloworld)
   - [DRL Fundamentals]()
   - [KSession Types]()
-  - [Rules as Excel]()
+  - [Decision Table]()
   - [Rule as Rest Api]()
 
 ---
