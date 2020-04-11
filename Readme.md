@@ -16,10 +16,12 @@
 - Fundamentals terminologies of drools:
   - **Rules**: These are part of knowledge that performs some tasks when specific conditions occur. These are defined as `.drl` files.
     
-    ```drl
+    ```
     package <org.example.com>
 
-    import <org.example.class>
+    import <org.example.class>;
+
+    global <variable_name>;
 
     rule  <rule_name>
     <attribute> <value>
@@ -28,7 +30,7 @@
         <conditions>
         
     then
-        <actions>
+        <actions>;
     end
     ```
     
