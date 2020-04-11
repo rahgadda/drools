@@ -7,7 +7,7 @@
 - [Appendix](#appendix)
 
 ## Overview
-- JBoss Drools is a Business Rule Management System. It is a framework where you can create rules that defines when a specific action should be done.
+- JBoss Drools is a **Business Rule Management System**. It is a framework where you can create rules that defines when a specific action should be done.
 - Drools execution workflow is split into two main parts:
   - **Authoring**: Authoring process involves the creation/setup of *Rule* files.
   - **Runtime**: It is creation of working memory and handling the activation.
