@@ -105,7 +105,7 @@
   docker run hello-world
 
   # Executing Drool Workbench
-  docker run -p 8080:8080 -p 8001:8001 -e JAVA_OPTS="-server -Xms1024m -Xmx1024m -Djava.net.preferIPv4Stack=true -Dfile.encoding=UTF-8" -v /scratch/wb_git:/opt/jboss/wildfly/bin/.niogit:Z -d --name drools-workbench jboss/drools-workbench-showcase:latest
+  docker run -p 8080:8080 -p 8001:8001 -e JAVA_OPTS="-server -Xms2024m -Xmx2024m -Djava.net.preferIPv4Stack=true -Dfile.encoding=UTF-8" -v /scratch/wb_git:/opt/jboss/wildfly/bin/.niogit:Z -d --name drools-workbench jboss/drools-workbench-showcase:latest
 
   # Checking error in executions
   docker ps
@@ -114,9 +114,11 @@
   
   - After successful execution of above script, drool workbench will be available [here](http://localhost:8080/business-central/kie-wb.jsp#) with user/pwd as `admin/admin`.
   - To install KIE Execution server using Docker, run below command. This will automatically make kie server enabled in drool workbench.
+  
   ```shell
   docker run -p 8180:8080 -d --name kie-server --link drools-workbench:kie-wb jboss/kie-server-showcase:latest
   ``` 
+  
   ![](./02-Images/01-Installation.png)
 
 ---

@@ -1,0 +1,16 @@
+POST http://54.152.167.77:8180/kie-server/services/rest/server/containers/instances/hello_1.0.0
+Authorization: Basic kieserver kieserver1!
+Content-Type: application/json
+X-KIE-ContentType: JSON
+
+{
+	"lookup": null,
+	"commands": [{
+		"insert": {
+			"object": "Rahul"
+		}
+
+	}, {
+		"fire-all-rules": {}
+	}]
+}
