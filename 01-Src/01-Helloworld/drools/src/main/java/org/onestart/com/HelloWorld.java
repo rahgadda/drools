@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class HelloWorld {
     private String  message;
+    private boolean isGreetingDone=true;
 
     public HelloWorld() {
     }
@@ -12,33 +13,20 @@ public class HelloWorld {
         this.message = message;
     }
 
+    public boolean getIsGreetingDone() {
+        return this.isGreetingDone;
+    }
+
+    public void setIsGreetingDone(boolean isGreetingDone) {
+        this.isGreetingDone = isGreetingDone;
+    }
+
     public String getMessage() {
         return this.message;
     }
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public HelloWorld message(String message) {
-        this.message = message;
-        return this;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == this)
-            return true;
-        if (!(o instanceof HelloWorld)) {
-            return false;
-        }
-        HelloWorld helloWorld = (HelloWorld) o;
-        return Objects.equals(message, helloWorld.message);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(message);
     }
 
     @Override

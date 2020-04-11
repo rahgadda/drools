@@ -25,8 +25,10 @@ public class App
         LOG.info("Running RuleEngine");
         kSession.fireAllRules();
         
+        LOG.info("Display Updated Message");
+        System.out.println(helloWorld.getMessage());
+        
         kSession.dispose();
         LOG.info("Closing kSession");
-
     }
 }
