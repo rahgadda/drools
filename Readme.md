@@ -23,7 +23,7 @@
 
     global <variable_name>;
 
-    rule  <rule_name>
+    rule  <rule_name> salience <number>
     <attribute> <value>
         
     when
@@ -39,6 +39,7 @@
     - *global* keyword is used in drools to define a global variable. Global variable are used to make a variable visible to all the rules inside a DRL file.
     - *dialect* keyword is used in drools to define the syntax employed in the expressions in the condition section or action section. By default the dialect is **Java**. Drools also support dialect **mvel**.
     - *rule* keyword must be followed by a logical rule name.
+    - *salience* keyword is used by the conflict resolution strategy to decide which rule to fire first. It has one attribute, which takes any expression that returns a number of type int (positive as well as negative numbers are valid). The higher the value, the more likely a rule will be picked up by the conflict resolution strategy to fire.
     - *when* keyword must be followed by some condition.
     - *then* keyword must have the consequence part if the when condition is met.
     - Rules actions have below keywords
