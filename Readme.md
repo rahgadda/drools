@@ -8,13 +8,16 @@
 
 ## Overview
 - JBoss Drools is a Business Rule Management System. It is a framework where you can create rules that defines when a specific action should be done.
-- 
+- Drools execution workflow is split into two main parts:
+  - **Authoring**: Authoring process involves the creation/setup of *Rule* files.
+  - **Runtime**: It is creation of working memory and handling the activation.
 - Fundamentals terminologies of drools:
   - **Rules**: These are part of knowledge that performs some tasks when specific conditions occur.
   - **Knowledge Base**: It represents the knowledge in the Drools ecosystem which stores resources that form rules.
   - **Data Model**: It contains structure of data on which rules are applied. A data model is a set of java classes that define data types.
-  - **Rule Engine**: It is a rule-based approach to implement an knowledge-based systems which can be used to make decisions.
+  - **Rule Engine**: It is a rule-based approach to implement an knowledge-based systems which can be used to make decisions. It is also refereed as **Production Rule System**.
   - **Facts**: It represents the data which serves as input for rules.
+  - **Inference Engine**: This is the brain of *Rule Engine*. It can scale to number of rules and facts. It matches facts/data against *Rules*.
   - **Working Memory**: It is a storage of facts, where they are used for pattern matching. It can be modified, insert, and remove.
   - **Knowledge Session**: This component holds all the resources required for firing rule. Here, all facts are inserted into the single session, and then matching rules are fired.
   - **Module**: This is a module which stores multiple Knowledge Bases which can hold different sessions.
