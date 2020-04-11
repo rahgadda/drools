@@ -124,14 +124,14 @@
 - Below are the example implementations of drools project.
   - [01-HelloWorld](./01-Src/01-Helloworld)
   - [DRL Fundamentals]()
+  - [Listeners]()
   - [KSession Types]()
   - [Decision Table]()
-  - [Rule as Rest Api]()
+  - [Ki Server]()
 
 ---
 ## Appendix
 - References
   - [Drools Overview](https://www.youtube.com/watch?v=fpMiZmvkItM)
   - [Kia Workbench - Medium](https://medium.com/@hasnat.saeed/setup-jboss-drools-workbench-and-kie-execution-server-on-wildfly-14-on-ubuntu-18-04-using-docker-e87b10f301ad)
-  - [Redhat DRL](https://access.redhat.com/documentation/en-us/red_hat_process_automation_manager/7.0/html/designing_a_decision_service_using_drl_rules/index)
   - [MVEL Documentation](http://mvel.documentnode.com/)
