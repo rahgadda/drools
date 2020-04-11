@@ -123,7 +123,6 @@
 ## Modules
 - Below are the example implementations of drools project.
   - [01-HelloWorld](./01-Src/01-Helloworld)
-  - [DRL Fundamentals]()
   - [Listeners]()
   - [KSession Types]()
   - [Decision Table]()
