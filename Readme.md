@@ -35,7 +35,7 @@
     - *Package* is used to acts as a namespace for Rules. Rule names within a package must be unique. These are similar to Java packages
     - *import* is used to import fact/action  pojo classes that act as data model/action helpers.
     - *global* keyword is used in drools to define a global variable. Global variable are used to make a variable visible to all the rules inside a DRL file.
-    - *dialect* keyword is used in drools to define the syntax employed in the expressions in the condition section or action section. By default the dialect is **Java**. Drools also support dialect **mvel**
+    - *dialect* keyword is used in drools to define the syntax employed in the expressions in the condition section or action section. By default the dialect is **Java**. Drools also support dialect **mvel**.
     - *rule* keyword must be followed by a logical rule name.
     - *when* keyword must be followed by some condition.
     - *then* keyword must have the consequence part if the when condition is met.
