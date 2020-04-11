@@ -7,12 +7,28 @@
 - [Appendix](#appendix)
 
 ## Overview
-- JBoss Drools is a **Business Rule Management System**. It is a framework where you can create rules that defines when a specific action should be done.
+- JBoss Drools is a **Business Rule Management System**. It is a framework where you can create rules that defines when a specific action should be done. 
+- It can be used for applications where business rules can be externalized and will be uploaded by business users.
+- 
+- One of the major drawback of drools is it consumes lots of memory. 
 - Drools execution workflow is split into two main parts:
   - **Authoring**: Authoring process involves the creation/setup of *Rule* files.
   - **Runtime**: It is creation of working memory and handling the activation.
 - Fundamentals terminologies of drools:
-  - **Rules**: These are part of knowledge that performs some tasks when specific conditions occur.
+  - **Rules**: These are part of knowledge that performs some tasks when specific conditions occur. These are defined as `.drl` files.
+   
+    ```drl
+    rule  <rule_name>
+    <attribute> <value>
+        
+    when
+        <conditions>
+        
+    then
+        <actions>
+    end
+    ```
+    
   - **Knowledge Base**: It represents the knowledge in the Drools ecosystem which stores resources that form rules.
   - **Data Model**: It contains structure of data on which rules are applied. A data model is a set of java classes that define data types.
   - **Rule Engine**: It is a rule-based approach to implement an knowledge-based systems which can be used to make decisions. It is also refereed as **Production Rule System**.
@@ -21,6 +37,8 @@
   - **Working Memory**: It is a storage of facts, where they are used for pattern matching. It can be modified, insert, and remove.
   - **Knowledge Session**: This component holds all the resources required for firing rule. Here, all facts are inserted into the single session, and then matching rules are fired.
   - **Module**: This is a module which stores multiple Knowledge Bases which can hold different sessions.
+  - **Agenda**: It's a logical concept. The agenda is the logical place where rules are waiting to be fired.
+  - **Activations**: It is the then part of the rules. These are placed in the `agenda` where the appropriate rule are fired.
   - **KIE**: "Knowledge Is Everything" is an umbrella project introduced to bring related technologies.
     - **KieContainer**: To work with kie technologies, we have to instantiate a KieContainer.
     - **KieSession**: We have to get it from the KieContainer to work with drools. This is used to give facts to the rule engine and fire rules.
@@ -38,6 +56,7 @@
 - **Docker Based Installation**
   - Create a Oracle Linux 7 environment.
   - Execute below commands to run Drools Workbench
+  
   ```shell
   # Creating base folders
   cd /scratch
@@ -72,8 +91,8 @@
   # Checking error in executions
   docker ps
   docker logs <container_id>
-
   ```
+  
   - After successful execution of above script, drool workbench will be available [here](http://localhost:8080/business-central/kie-wb.jsp#) with user/pwd as `admin/admin`.
   - To install KIE Execution server using Docker, run below command. This will automatically make kie server enabled in drool workbench.
   ```shell
@@ -91,3 +110,4 @@
 - References
   - [Drools Overview](https://www.youtube.com/watch?v=fpMiZmvkItM)
   - [Kia Workbench - Medium](https://medium.com/@hasnat.saeed/setup-jboss-drools-workbench-and-kie-execution-server-on-wildfly-14-on-ubuntu-18-04-using-docker-e87b10f301ad)
+  - [Redhat DRL](https://access.redhat.com/documentation/en-us/red_hat_process_automation_manager/7.0/html/designing_a_decision_service_using_drl_rules/index)
