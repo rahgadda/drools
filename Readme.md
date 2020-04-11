@@ -27,6 +27,14 @@
 
 ---
 ## Installation
+- **Setting Development Environment**
+  - Install VSCode and below plugins
+    - Java Extension Pack
+    - Drools
+  - Check out code from [modules](#modules)
+  - Navigate to **MAVEN PROJECTS**  and click on **package**
+  ![](./02-Images/02-DevSetup-RunMaven.png)
+  - Navigate to *\<Project\>->target->\<Project\>-1.0-SNAPSHOT.jar*, Mouse Right-Click and get *Copy Relative Path* and run `java -jar <relative-path>/<Project>-1.0-SNAPSHOT.jar`
 - **Docker Based Installation**
   - Create a Oracle Linux 7 environment.
   - Execute below commands to run Drools Workbench
