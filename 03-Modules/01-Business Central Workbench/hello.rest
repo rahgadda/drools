@@ -1,16 +1,45 @@
-POST http://54.152.167.77:8180/kie-server/services/rest/server/containers/instances/hello_1.0.0
+### Swagger URL ###
+http://18.212.191.183:8180/kie-server/docs/
+
+### List Env Details ###
+GET http://18.212.191.183:8180/kie-server/services/rest/server
+Authorization: Basic admin admin
+Accept: application/json
+
+### List Containers ###
+GET http://18.212.191.183:8180/kie-server/services/rest/server/containers/
+Authorization: Basic kieserver kieserver1!
+Accept: application/json
+
+###
+GET http://18.212.191.183:8180/kie-server/services/rest/server/containers?groupId=org.onestart&artifactId=com&version=1.0.0&status=STARTED
+Authorization: Basic kieserver kieserver1!
+Accept: application/json
+
+### List Instances ###
+GET http://18.212.191.183:8180/kie-server/services/rest/server/containers/instances
+Authorization: Basic kieserver kieserver1!
+Accept: application/json
+
+### Execute Drools ###
+POST http://18.212.191.183:8180/kie-server/services/rest/server/containers/instances/helloworld
 Authorization: Basic kieserver kieserver1!
 Content-Type: application/json
-X-KIE-ContentType: JSON
+X-KIE-ContentType: application/json
 
 {
-	"lookup": null,
-	"commands": [{
+	"commands": [
+	{
 		"insert": {
-			"object": "Rahul"
+			"object": {
+				"org.onestart.com.HelloWorld": {
+					"message": "Rahul",
+					"isGreetingDone": false
+				}
+			}
 		}
-
-	}, {
+	}, 
+	{
 		"fire-all-rules": {}
 	}]
 }
