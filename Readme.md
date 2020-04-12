@@ -61,7 +61,7 @@
   - **KIE**: "Knowledge Is Everything" is an umbrella project introduced to bring related technologies.
     - **KieContainer**: To work with kie technologies, we have to instantiate a KieContainer.
     - **KieSession**: We have to get it from the KieContainer to work with drools. This is used to give facts to the rule engine and fire rules.
-
+![](./02-Images/03-Architecture.png)
 ---
 ## Installation
 - **Setting Development Environment**
