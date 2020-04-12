@@ -1,28 +1,28 @@
 ### Swagger URL ###
-http://18.212.191.183:8180/kie-server/docs/
+http://3.89.107.199:8180/kie-server/docs/
 
 ### List Env Details ###
-GET http://18.212.191.183:8180/kie-server/services/rest/server
+GET http://3.89.107.199:8180/kie-server/services/rest/server
 Authorization: Basic admin admin
 Accept: application/json
 
 ### List Containers ###
-GET http://18.212.191.183:8180/kie-server/services/rest/server/containers/
+GET http://3.89.107.199:8180/kie-server/services/rest/server/containers/
 Authorization: Basic kieserver kieserver1!
 Accept: application/json
 
 ###
-GET http://18.212.191.183:8180/kie-server/services/rest/server/containers?groupId=org.onestart&artifactId=com&version=1.0.0&status=STARTED
+GET http://3.89.107.199:8180/kie-server/services/rest/server/containers?groupId=org.onestart&artifactId=com&version=1.0.0&status=STARTED
 Authorization: Basic kieserver kieserver1!
 Accept: application/json
 
 ### List Instances ###
-GET http://18.212.191.183:8180/kie-server/services/rest/server/containers/instances
+GET http://3.89.107.199:8180/kie-server/services/rest/server/containers/instances
 Authorization: Basic kieserver kieserver1!
 Accept: application/json
 
 ### Execute Drools ###
-POST http://18.212.191.183:8180/kie-server/services/rest/server/containers/instances/helloworld
+POST http://3.89.107.199:8180/kie-server/services/rest/server/containers/instances/helloworld
 Authorization: Basic kieserver kieserver1!
 Content-Type: application/json
 X-KIE-ContentType: application/json
